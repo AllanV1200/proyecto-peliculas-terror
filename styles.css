@@ -1,0 +1,548 @@
+/* ==========================================================================
+   1. VARIABLES CSS Y RESET BASE (MODELO DE CAJA)
+   ========================================================================== */
+:root {
+    --bg-main: #0a0a0a;          /* Negro profundo */
+    --bg-card: #141414;          /* Negro para tarjetas */
+    --bg-header: #111111;        /* Oscuro para la cabecera */
+    --primary-orange: #cc0000;   /* Rojo (ahora actúa como color principal) */
+    --orange-hover: #ff3333;     /* Rojo brillante para efectos hover */
+    --accent-red: #ff6600;       /* Naranja (ahora actúa como color de acento) */
+    --text-white: #f5f5f5;
+    --text-muted: #b0b0b0;
+    --border-dark: #2a2a2a;
+    --shadow-orange: rgba(204, 0, 0, 0.4); /* Resplandor rojo */
+}
+
+/* Variables para el cambio a Modo Claro / Alternativo */
+body.light-theme {
+    --bg-main: #f4f4f4;
+    --bg-card: #ffffff;
+    --bg-header: #e0e0e0;
+    --primary-orange: #d95300;
+    --orange-hover: #b84300;
+    --accent-red: #990000;
+    --text-white: #1a1a1a;
+    --text-muted: #ff6600;
+    --border-dark: #dddddd;
+    --shadow-orange: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-white);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================================================
+   2. ENCABEZADO Y NAVEGACIÓN (FLEXBOX)
+   ========================================================================== */
+.header {
+    background-color: var(--bg-header);
+    border-bottom: 2px solid var(--primary-orange);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    color: var(--primary-orange);
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px var(--shadow-orange);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.navbar a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--primary-orange);
+}
+
+.btn-theme {
+    background-color: transparent;
+    border: 2px solid var(--primary-orange);
+    color: var(--primary-orange);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-theme:hover {
+    background-color: var(--primary-orange);
+    color: #000;
+    box-shadow: 0 0 10px var(--primary-orange);
+}
+
+/* ==========================================================================
+   3. SECCIÓN HERO Y TITULARES
+   ========================================================================== */
+/* ==========================================================================
+   SECCIÓN HERO (FONDO NARANJA Y TEXTO BLANCO)
+   ========================================================================== */
+.hero-section {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(255, 102, 0, 0.05) 0%, rgba(10, 10, 10, 1) 100%);
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    color: var(--primary-orange);
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   SECCIÓN HERO (SOLO PARA MODO CLARO)
+   ========================================================================== */
+body.light-theme .hero-section {
+    background: linear-gradient(135deg, #ff6600 0%, #d94800 100%);
+    border-bottom: 3px solid #b33600;
+}
+
+body.light-theme .hero-content h2 {
+    color: #ffffff !important;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+body.light-theme .hero-content p {
+    color: #ffffff !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================================
+   SECCIÓN HERO (SOLO PARA MODO CLARO)
+   ========================================================================== */
+body.light-theme .hero-section {
+    background: linear-gradient(135deg, #ff6600 0%, #d94800 100%);
+    border-bottom: 3px solid #b33600;
+}
+
+body.light-theme .hero-content h2 {
+    color: #ffffff !important;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+body.light-theme .hero-content p {
+    color: #ffffff !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================================
+   4. GRILLA Y TARJETAS DE PELÍCULAS (FLEXBOX / GRID)
+   ========================================================================== */
+.movies-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.movie-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-orange);
+    box-shadow: 0 5px 20px var(--shadow-orange);
+}
+
+.movie-img-container {
+    height: 250px;
+    overflow: hidden;
+}
+
+.movie-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.movie-card:hover .movie-img {
+    transform: scale(1.05);
+}
+
+.movie-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.movie-title {
+    font-size: 1.5rem;
+    color: var(--text-white);
+    margin-bottom: 0.2rem;
+}
+
+.movie-subtitle {
+    font-size: 1rem;
+    color: var(--accent-red);
+    font-style: italic;
+    margin-bottom: 0.8rem;
+}
+
+.movie-badges {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.badge {
+    background-color: #1f1f1f;
+    color: var(--primary-orange);
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-dark);
+}
+
+.movie-director {
+    margin-bottom: 0.8rem;
+    color: var(--text-white);
+}
+
+.movie-description {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+/* BOTÓN DESPLEGABLE Y MOSTRAR/OCULTAR CON JS */
+.btn-toggle-details {
+    background-color: var(--primary-orange);
+    color: #000;
+    border: none;
+    padding: 0.6rem 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: auto;
+    transition: background-color 0.3s ease;
+}
+
+.btn-toggle-details:hover {
+    background-color: var(--orange-hover);
+}
+
+.movie-details-container {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border-dark);
+    transition: all 0.3s ease;
+}
+
+.movie-details-container.hidden {
+    display: none; /* Clase toggled con JS */
+}
+
+.movie-details {
+    list-style: none;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.movie-details li {
+    margin-bottom: 0.6rem;
+}
+
+.movie-details strong {
+    color: var(--primary-orange);
+}
+
+/* ==========================================================================
+   5. GALERÍA MULTIMEDIA & QUIZ
+   ========================================================================== */
+.media-section, .quiz-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.media-box {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.media-box h3 {
+    color: var(--primary-orange);
+    margin-bottom: 1rem;
+}
+
+.media-box video {
+    border-radius: 6px;
+    border: 1px solid var(--primary-orange);
+}
+
+/* FORMULARIO DEL QUIZ INTERACTIVO */
+.quiz-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.question-group {
+    margin-bottom: 1.5rem;
+}
+
+.question-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-white);
+}
+
+.quiz-select, .quiz-input {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #000;
+    border: 1px solid var(--border-dark);
+    color: var(--text-white);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.quiz-select:focus, .quiz-input:focus {
+    outline: none;
+    border-color: var(--primary-orange);
+}
+
+.btn-primary {
+    width: 100%;
+    background-color: var(--accent-red);
+    color: #fff;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ff0000;
+    box-shadow: 0 0 10px rgba(204, 0, 0, 0.5);
+}
+
+.quiz-result {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: #1f1f1f;
+    border-left: 4px solid var(--primary-orange);
+    font-weight: bold;
+    text-align: center;
+}
+
+.quiz-result.hidden {
+    display: none;
+}
+
+/* ==========================================================================
+   6. FOOTER Y RESPONSIVIDAD (MEDIA QUERIES)
+   ========================================================================== */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--bg-header);
+    border-top: 1px solid var(--border-dark);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}
+
+/* REGLA RESPONSIVA PARA DISPOSITIVOS MÓVILES */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .movies-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==========================================================================
+   ETIQUETAS (AÑO Y GÉNERO) EN MODO CLARO
+   ========================================================================== */
+body.light-theme .badge {
+    background-color: #ff6600;  /* Fondo naranja vibrante */
+    color: #ffffff;             /* Letras en blanco */
+    border-color: #d94800;      /* Borde naranja ligeramente más oscuro */
+}
+
+/* ==========================================================================
+   GALERÍA MULTIMEDIA SEPARADA (VIDEOS Y AUDIOS)
+   ========================================================================== */
+.media-category {
+    margin-bottom: 3rem;
+}
+
+.category-title {
+    color: var(--primary-orange);
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid var(--border-dark);
+    padding-bottom: 0.5rem;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.media-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    border-radius: 8px;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.media-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary-orange);
+}
+
+.media-card h4 {
+    color: var(--text-white);
+    font-size: 1.05rem;
+}
+
+.media-card video {
+    width: 100%;
+    border-radius: 6px;
+    background-color: #000;
+}
+
+.media-card audio {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.media-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   ESTILOS DE TARJETAS DE AUDIO CON PORTADA Y DETALLES
+   ========================================================================== */
+.audio-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.audio-cover-container {
+    width: 447px;
+    height: 447px;
+    max-width: 100%; /* Evita que la tarjeta se desborde en pantallas pequeñas */
+    margin: 0 auto 0.8rem auto; /* Centra la portada horizontalmente */
+    overflow: hidden;
+    border-radius: 6px;
+    border: 1px solid var(--border-dark);
+}
+
+.audio-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adapta cualquier imagen a 447x447 sin deformarla */
+    transition: transform 0.4s ease;
+}
+
+.audio-card:hover .audio-cover-img {
+    transform: scale(1.05);
+}
+
+.audio-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.track-name, 
+.track-composer {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+.track-name strong, 
+.track-composer strong {
+    color: var(--primary-orange);
+}
+
+.audio-card audio {
+    margin-top: 0.8rem;
+    width: 100%;
+}

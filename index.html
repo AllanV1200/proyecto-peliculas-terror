@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Mejores Películas de Terror de la Historia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">TerrorPelis</h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#peliculas">Películas</a></li>
+                    <li><a href="#multimedia">Terror Media</a></li>
+                    <li><a href="#quiz">Terror Quiz</a></li>
+                </ul>
+            </nav>
+            <!-- Botón para Modo Oscuro / Claro (Requisito JS) -->
+            <button id="theme-toggle" class="btn-theme">Modo Oscuro</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓN 1: PRESENTACIÓN / HERO -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <h2>La Mejores Películas de Terror</h2>
+                <p>Bienvenidos a TerrorPelis, en esta página encontrarás un listado de películas de terror que han sido claves en la historia del cine, películas que han definido un género, marcado una época y sobre todo... han generada grandes sustos y pesadillas.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: LISTADO DE PELÍCULAS -->
+        <!-- CONTENEDOR DE TARJETAS DE PELÍCULAS -->
+<div class="movies-grid" id="movies-container">
+
+    <!-- 1. LA MASACRE DE TEXAS -->
+    <article class="movie-card">
+        <div class="movie-img-container">
+            <img src="assets/images/texas-massacre.jpeg" alt="La Masacre de Texas" class="movie-img">
+        </div>
+        <div class="movie-content">
+            <h3 class="movie-title">La Masacre de Texas</h3>
+            <h4 class="movie-subtitle">The Texas Chain Saw Massacre</h4>
+            
+            <div class="movie-badges">
+                <span class="badge year">📅 1974</span>
+                <span class="badge genre">🏷️ Slasher / Terror Rural</span>
+            </div>
+
+            <p class="movie-director"><strong>Director:</strong> Tobe Hooper</p>
+            
+            <p class="movie-description">
+                Un grupo de jóvenes viaja por las carreteras de Texas y termina atrapado en la remota casa de una familia de caníbales grotescos, liderados por un asesino enmascarado que porta una motosierra.
+            </p>
+
+            <ul class="movie-details">
+                <li><strong>Reparto principal:</strong> Marilyn Burns (Sally Hardesty), Gunnar Hansen (Leatherface / Cara de Cuero).</li>
+                <li><strong>Elementos significativos:</strong> La motosierra, la máscara confeccionada con piel humana, el calor sofocante visual y el diseño de sonido desorientador.</li>
+                <li><strong>Desarrollo:</strong> Filmada con un presupuesto bajísimo ($140,000) y en condiciones extremas de calor de más de 40°C en Texas, lo que generó un ambiente de tensión real entre los actores.</li>
+                <li><strong>Importancia e influencia:</strong> Fundó las bases estilísticas del cine *slasher* moderno, influyendo en la creación de villanos icónicos enmascarados e imponentes.</li>
+            </ul>
+        </div>
+    </article>
+
+    <!-- 2. HALLOWEEN -->
+    <article class="movie-card">
+        <div class="movie-img-container">
+            <img src="assets/images/halloween.jpg" alt="Halloween" class="movie-img">
+        </div>
+        <div class="movie-content">
+            <h3 class="movie-title">Halloween</h3>
+            <h4 class="movie-subtitle">Halloween</h4>
+            
+            <div class="movie-badges">
+                <span class="badge year">📅 1978</span>
+                <span class="badge genre">🏷️ Slasher</span>
+            </div>
+
+            <p class="movie-director"><strong>Director:</strong> John Carpenter</p>
+
+            <p class="movie-description">
+                Quince años después de haber asesinado a su hermana en la noche de Halloween, el paciente psiquiátrico Michael Myers escapa del sanatorio y regresa a su pueblo natal, Haddonfield, para acechar a una joven niñera.
+            </p>
+
+            <ul class="movie-details">
+                <li><strong>Reparto principal:</strong> Jamie Lee Curtis (Laurie Strode), Donald Pleasence (Dr. Sam Loomis), Nick Castle (Michael Myers / The Shape).</li>
+                <li><strong>Elementos significativos:</strong> La icónica máscara blanca (modificada de un disfraz del Capitán Kirk), las tomas en primera persona (POV) y la inolvidable banda sonora a piano compuesta por el mismo director.</li>
+                <li><strong>Desarrollo:</strong> Rodada en tan solo 20 días con $300,000 dólares. Al no tener presupuesto para vestuario, el equipo compró la máscara más barata en una tienda de disfraces por menos de $2.</li>
+                <li><strong>Importancia e influencia:</strong> Definió el concepto de la *"Final Girl"* (chica final) y consolidó el modelo comercial del subgénero *slasher* a nivel mundial.</li>
+            </ul>
+        </div>
+    </article>
+
+    <!-- 3. EL EXORCISTA -->
+    <article class="movie-card">
+        <div class="movie-img-container">
+            <img src="assets/images/el-exorcista.jpg" alt="El Exorcista" class="movie-img">
+        </div>
+        <div class="movie-content">
+            <h3 class="movie-title">El Exorcista</h3>
+            <h4 class="movie-subtitle">The Exorcist</h4>
+            
+            <div class="movie-badges">
+                <span class="badge year">📅 1973</span>
+                <span class="badge genre">🏷️ Terror Posesión / Sobrenatural</span>
+            </div>
+
+            <p class="movie-director"><strong>Director:</strong> William Friedkin</p>
+
+            <p class="movie-description">
+                Cuando una niña de 12 años comienza a exhibir comportamientos terroríficos e inexplicables, su madre recurre a dos sacerdotes católicos para practicar un arriesgado exorcismo y salvar su alma de una entidad demoníaca.
+            </p>
+
+            <ul class="movie-details">
+                <li><strong>Reparto principal:</strong> Linda Blair (Regan MacNeil), Ellen Burstyn (Chris MacNeil), Jason Miller (Padre Karras), Max von Sydow (Padre Merrin).</li>
+                <li><strong>Elementos significativos:</strong> La giromorfosis del cuello a 360°, el vómito verde, la melodía *"Tubular Bells"* y los efectos de voz gutural demoníaca.</li>
+                <li><strong>Desarrollo:</strong> El set del dormitorio de Regan fue refrigerado con acondicionadores de aire industriales para lograr que el aliento congelado de los actores fuera real en cámara.</li>
+                <li><strong>Importancia e influencia:</strong> Fue la primera película de terror nominada al Premio Óscar a Mejor Película. Es considerada el referente definitivo del cine de posesiones.</li>
+            </ul>
+        </div>
+    </article>
+
+    <!-- 4. EL JUEGO DEL MIEDO -->
+    <article class="movie-card">
+        <div class="movie-img-container">
+            <img src="assets/images/saw.jpg" alt="El Juego del Miedo" class="movie-img">
+        </div>
+        <div class="movie-content">
+            <h3 class="movie-title">El Juego del Miedo</h3>
+            <h4 class="movie-subtitle">Saw</h4>
+            
+            <div class="movie-badges">
+                <span class="badge year">📅 2004</span>
+                <span class="badge genre">🏷️ Gore / Thriller Psicológico</span>
+            </div>
+
+            <p class="movie-director"><strong>Director:</strong> James Wan</p>
+
+            <p class="movie-description">
+                Dos hombres despiertan encadenados en un sucio baño subterráneo junto a un cadáver. Pronto descubren que son víctimas de "Jigsaw", un asesino en serie que somete a sus víctimas a dilemas mortales para valorar la vida.
+            </p>
+
+            <ul class="movie-details">
+                <li><strong>Reparto principal:</strong> Tobin Bell (John Kramer / Jigsaw), Cary Elwes (Dr. Lawrence Gordon), Leigh Whannell (Adam Stanheight).</li>
+                <li><strong>Elementos significativos:</strong> La marioneta "Billy" en el triciclo, las trampas mecánicas complejas, las grabaciones en microcasetes y el tema musical *"Hello Zepp"*.</li>
+                <li><strong>Desarrollo:</strong> James Wan y Leigh Whannell crearon la película basándose en un cortometraje autofinanciado. Toda la cinta se filmó en solo 18 días dentro de una única bodega.</li>
+                <li><strong>Importancia e influencia:</strong> Redefinió el terror de los años 2000, iniciando una de las sagas de terror más prolíficas y rentables en la historia del cine moderno.</li>
+            </ul>
+        </div>
+    </article>
+
+    <!-- 5. EL CONJURO -->
+    <article class="movie-card">
+        <div class="movie-img-container">
+            <img src="assets/images/the-conjuring.jpg" alt="El Conjuro" class="movie-img">
+        </div>
+        <div class="movie-content">
+            <h3 class="movie-title">El Conjuro</h3>
+            <h4 class="movie-subtitle">The Conjuring</h4>
+            
+            <div class="movie-badges">
+                <span class="badge year">📅 2013</span>
+                <span class="badge genre">🏷️ Terror Paranormal / Caso Real</span>
+            </div>
+
+            <p class="movie-director"><strong>Director:</strong> James Wan</p>
+
+            <p class="movie-description">
+                A principios de los 70, la familia Perron empieza a experimentar sucesos extraños e inquietantes en su granja de Rhode Island. Desesperados, solicitan la ayuda de los renombrados investigadores paranormales Ed y Lorraine Warren.
+            </p>
+
+            <ul class="movie-details">
+                <li><strong>Reparto principal:</strong> Vera Farmiga (Lorraine Warren), Patrick Wilson (Ed Warren), Lili Taylor (Carolyn Perron).</li>
+                <li><strong>Elementos significativos:</strong> La muñeca de porcelana Annabelle, el inquietante juego de las palmadas (*"Clap Always"*), la caja de música y los relojes detenidos a las 3:07 AM.</li>
+                <li><strong>Desarrollo:</strong> Basada en los archivos reales de los demonólogos Warren. La producción consultó directamente a la verdadera Lorraine Warren para recrear los incidentes con fidelidad.</li>
+                <li><strong>Importancia e influencia:</strong> Demostró que el terror de época con clasificación PG-13/R podía arrasar en taquilla, dando origen al "Universo Cinematográfico de The Conjuring".</li>
+            </ul>
+        </div>
+    </article>
+
+    <!-- 6. EL LEGADO DEL DIABLO -->
+    <article class="movie-card">
+        <div class="movie-img-container">
+            <img src="assets/images/El-legado-del-diablo.png" alt="El Legado del Diablo" class="movie-img">
+        </div>
+        <div class="movie-content">
+            <h3 class="movie-title">El Legado del Diablo</h3>
+            <h4 class="movie-subtitle">Hereditary</h4>
+            
+            <div class="movie-badges">
+                <span class="badge year">📅 2018</span>
+                <span class="badge genre">🏷️ Terror Psicológico / Folk Horror</span>
+            </div>
+
+            <p class="movie-director"><strong>Director:</strong> Ari Aster</p>
+
+            <p class="movie-description">
+                Tras la muerte de la matriarca de la familia Graham, su hija Annie y sus nietos comienzan a desentrañar secretos oscuros y perturbadores sobre sus antepasados, desencadenando una espiral inevitable de paranoia y tragedia.
+            </p>
+
+            <ul class="movie-details">
+                <li><strong>Reparto principal:</strong> Toni Collette (Annie Graham), Alex Wolff (Peter Graham), Milly Shapiro (Charlie Graham).</li>
+                <li><strong>Elementos significativos:</strong> Las maquetas a escala hiperrealistas de Annie, el hábito del chasquido de lengua de Charlie y el culto al demonio Paimon.</li>
+                <li><strong>Desarrollo:</strong> El director Ari Aster concibió la historia como una tragedia familiar sobre el trauma heredado, disfrazada bajo los códigos del cine de terror demoníaco.</li>
+                <li><strong>Importancia e influencia:</strong> Aclamada mundialmente como uno de los pilares del "Terror Elevado" (*Elevated Horror*) de la productora A24.</li>
+            </ul>
+        </div>
+    </article>
+
+    <!-- 7. LA BRUJA -->
+    <article class="movie-card">
+        <div class="movie-img-container">
+            <img src="assets/images/the-witch.jpg" alt="La Bruja" class="movie-img">
+        </div>
+        <div class="movie-content">
+            <h3 class="movie-title">La Bruja</h3>
+            <h4 class="movie-subtitle">The Witch: A New-England Folktale</h4>
+            
+            <div class="movie-badges">
+                <span class="badge year">📅 2015</span>
+                <span class="badge genre">🏷️ Folk Horror / Terror Histórico</span>
+            </div>
+
+            <p class="movie-director"><strong>Director:</strong> Robert Eggers</p>
+
+            <p class="movie-description">
+                En la Nueva Inglaterra del siglo XVII, una familia puritana exiliada establece su hogar cerca de un bosque remoto. Cuando su bebé desaparece misteriosamente, la paranoia y las acusaciones de brujería destruyen la familia desde adentro.
+            </p>
+
+            <ul class="movie-details">
+                <li><strong>Reparto principal:</strong> Anya Taylor-Joy (Thomasin), Ralph Ineson (William), Kate Dickie (Katherine).</li>
+                <li><strong>Elementos significativos:</strong> El macho cabrío "Black Phillip", el uso de inglés arcaico puritano y la atmósfera claustrofóbica del bosque espeso.</li>
+                <li><strong>Desarrollo:</strong> Robert Eggers tardó años investigando registros judiciales y escritos de la época para adaptar los diálogos originales de los juicios de brujas reales.</li>
+                <li><strong>Importancia e influencia:</strong> Catapultó a la fama a Anya Taylor-Joy y marcó el renacimiento del subgénero *folk horror* con enfoque histórico riguroso.</li>
+            </ul>
+        </div>
+    </article>
+
+    <!-- 8. SILENT HILL -->
+    <article class="movie-card">
+        <div class="movie-img-container">
+            <img src="assets/images/silent_hill.jpg" alt="Silent Hill" class="movie-img">
+        </div>
+        <div class="movie-content">
+            <h3 class="movie-title">Silent Hill</h3>
+            <h4 class="movie-subtitle">Silent Hill</h4>
+            
+            <div class="movie-badges">
+                <span class="badge year">📅 2006</span>
+                <span class="badge genre">🏷️ Adaptación de Videojuego / Monstruos</span>
+            </div>
+
+            <p class="movie-director"><strong>Director:</strong> Christophe Gans</p>
+
+            <p class="movie-description">
+                Buscando respuestas para curar los sonámbulos de su hija adaptada, una madre viaja al pueblo abandonado de Silent Hill, una ciudad envuelta en niebla eterna que esconde una dimensión demoníaca distorsionada.
+            </p>
+
+            <ul class="movie-details">
+                <li><strong>Reparto principal:</strong> Radha Mitchell (Rose Da Silva), Laurie Holden (Cybil Bennett), Jodelle Ferland (Sharon / Alessa), Roberto Campanella (Pyramid Head).</li>
+                <li><strong>Elementos significativos:</strong> La sirena de ataque aéreo que anuncia la transición al *"Otherworld"*, la niebla constante, las Enfermeras Oscuras y *Pyramid Head*.</li>
+                <li><strong>Desarrollo:</strong> El director insistió en utilizar efectos prácticos y bailarines profesionales dentro de trajes para interpretar a los monstruos en lugar de abusas de CGI.</li>
+                <li><strong>Importancia e influencia:</strong> Es considerada una de las mejores adaptaciones cinematográficas de videojuegos, destacando por su dirección de arte y fidelidad estética.</li>
+            </ul>
+        </div>
+    </article>
+
+    <!-- 9. JEEPERS CREEPERS -->
+    <article class="movie-card">
+        <div class="movie-img-container">
+            <img src="assets/images/jeepers.jpg" alt="Jeepers Creepers" class="movie-img">
+        </div>
+        <div class="movie-content">
+            <h3 class="movie-title">Jeepers Creepers</h3>
+            <h4 class="movie-subtitle">El Terror Llama a su Puerta / Jeepers Creepers</h4>
+            
+            <div class="movie-badges">
+                <span class="badge year">📅 2001</span>
+                <span class="badge genre">🏷️ Monster Movie / Slasher Sobrenatural</span>
+            </div>
+
+            <p class="movie-director"><strong>Director:</strong> Victor Salva</p>
+
+            <p class="movie-description">
+                Dos hermanos universitarios cruzan una carretera solitaria cuando son acosados por un camión oxidado. Al investigar la Guarida de una criatura ancestral, descubren que se han convertido en el objetivo de un monstruo hambriento.
+            </p>
+
+            <ul class="movie-details">
+                <li><strong>Reparto principal:</strong> Gina Philips (Trish Jenner), Justin Long (Darry Jenner), Jonathan Breck (The Creeper).</li>
+                <li><strong>Elementos significativos:</strong> El camión de carga con la matrícula *"BEATNGU"*, el gramófono tocando la canción tradicional *"Jeepers Creepers"* y el ciclo de cacería de 23 días cada 23 primaveras.</li>
+                <li><strong>Desarrollo:</strong> Producida por el legendario cineasta Francis Ford Coppola. El diseño de la criatura combinó detalles de reptiles, vampiros y demonios alados.</li>
+                <li><strong>Importancia e influencia:</strong> Se convirtió en un clásico de culto del cine de terror de la década de los 2000, creando un nuevo monstruo en la cultura pop.</li>
+            </ul>
+        </div>
+    </article>
+
+    <!-- 10. MIDSOMMAR -->
+    <article class="movie-card">
+        <div class="movie-img-container">
+            <img src="assets/images/midsommar.jpg" alt="Midsommar" class="movie-img">
+        </div>
+        <div class="movie-content">
+            <h3 class="movie-title">Midsommar</h3>
+            <h4 class="movie-subtitle">Midsommar: El Terror No Espera a la Noche</h4>
+            
+            <div class="movie-badges">
+                <span class="badge year">📅 2019</span>
+                <span class="badge genre">🏷️ Folk Horror / Terror Psicodélico</span>
+            </div>
+
+            <p class="movie-director"><strong>Director:</strong> Ari Aster</p>
+
+            <p class="movie-description">
+                Una pareja estadounidense con problemas viaja con un grupo de amigos a un festival veraniego en una comuna remota de Suecia. Lo que parece un retiro idílico pronto se convierte en una pesadilla pagana bajo un sol constante.
+            </p>
+
+            <ul class="movie-details">
+                <li><strong>Reparto principal:</strong> Florence Pugh (Dani Ardor), Jack Reynor (Christian), Will Poulter (Mark), Vilhelm Blomgren (Pelle).</li>
+                <li><strong>Elementos significativos:</strong> El imponente vestido tejido con miles de flores de la Reina de Mayo, los rituales tradicionales (*Ättestupa*) y el sol resplandeciente continuo.</li>
+                <li><strong>Desarrollo:</strong> Ari Aster concibió el guion tras romper con su pareja, usando la temática de cultos nórdicos como metáfora de una dolorosa separación afectiva.</li>
+                <li><strong>Importancia e influencia:</strong> Rompió el paradigma del cine de terror al desarrollarse casi por completo bajo la luz del día plena, demostrando que el miedo no necesita de la oscuridad para aterrorizar.</li>
+            </ul>
+        </div>
+    </article>
+
+</div>
+        </section>
+
+        <!-- SECCIÓN 3: GALERÍA MULTIMEDIA -->
+        <!-- SECCIÓN 3: GALERÍA MULTIMEDIA SEPARADA -->
+<section id="multimedia" class="media-section">
+    <h2 class="section-title">Terror Media</h2>
+    <p class="section-subtitle">Explora los tráileres oficiales y la atmósfera sonora de las películas</p>
+
+    <!-- SUBSECCIÓN 1: TRÁILERES -->
+    <div class="media-category">
+        <h3 class="category-title">Tráileres</h3>
+        <div class="media-grid">
+            
+            <!-- Video 1: El Conjuro -->
+            <div class="media-card">
+                <h4>El Conjuro - Tráiler Oficial</h4>
+                <video controls poster="assets/images/El conjuro (vid).jpg">
+                    <source src="assets/media/EL CONJURO - Tráiler 1 Subtitulado - Oficial de Warner Bros. Pictures(480P).mp4" type="video/mp4">
+                    Tu navegador no soporta video.
+                </video>
+            </div>
+
+            <!-- Video 2: Hereditary (Sigue este modelo para añadir más videos) -->
+            <div class="media-card">
+                <h4>Hereditary - Tráiler Oficial</h4>
+                <video controls poster="assets/images/Hereditary (vid).jpg">
+                    <source src="assets/media/HEREDITARY - Trailer SUBTITULADO 2018(360P).mp4" type="video/mp4">
+                    Tu navegador no soporta video.
+                </video>
+            </div>
+
+            <div class="media-card">
+                <h4>Jeepers Creepers - Tráiler Oficial</h4>
+                <video controls poster="assets/images/jeeperscreepers(vid).jpg">
+                    <source src="assets/media/Jeepers Creepers (2001) HD Trailer Oficial Subtitulado Español - Justin Long - Terror_Criaturas(360P).mp4" type="video/mp4">
+                    Tu navegador no soporta video.
+                </video>
+            </div>
+
+            <div class="media-card">
+                <h4>The Witch - Tráiler Oficial</h4>
+                <video controls poster="assets/images/the-witch (vid).jpg">
+                    <source src="assets/media/LA BRUJA _ Trailer subtitulado (HD)(360P).mp4" type="video/mp4">
+                    Tu navegador no soporta video.
+                </video>
+            </div>
+
+            <div class="media-card">
+                <h4>Midsommar - Tráiler Oficial</h4>
+                <video controls poster="assets/images/midsommat (vid).jpg">
+                    <source src="assets/media/Midsommar - Tráiler Oficial (Sub. Español)(360P).mp4" type="video/mp4">
+                    Tu navegador no soporta video.
+                </video>
+            </div>
+
+            <div class="media-card">
+                <h4>La Masacre de Texas - Tráiler Oficial</h4>
+                <video controls poster="assets/images/texas chainsaw(vid).jpg">
+                    <source src="assets/media/The Texas Chainsaw Massacre (1974)  - Original Trailer (4K)(480P).mp4" type="video/mp4">
+                    Tu navegador no soporta video.
+                </video>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SUBSECCIÓN 2: AUDIOS Y BANDA SONORA -->
+    <!-- SUBSECCIÓN: AUDIOS CON PORTADA Y DETALLES -->
+<div class="media-category">
+    <h3 class="category-title">Galería de Audio y Sonidos</h3>
+    <div class="media-grid">
+
+        <!-- Tarjeta de Audio 1: Halloween -->
+        <div class="media-card audio-card">
+            <div class="audio-cover-container">
+                <img src="assets/images/halloween_aud.jpg" alt="Portada Halloween" class="audio-cover-img">
+            </div>
+            <div class="audio-info">
+                <h4>Halloween (1978)</h4>
+                <p class="track-name">🎵 <strong>Tema:</strong> Main Title</p>
+                <p class="track-composer">🎼 <strong>Compositor:</strong> John Carpenter</p>
+                <audio controls class="audio-player">
+                    <source src="assets/media/John Carpenter - Halloween 1978  (main Theme)(MP3_160K).mp3" type="audio/mpeg">
+                    Tu navegador no soporta audio.
+                </audio>
+            </div>
+        </div>
+
+        <!-- Tarjeta de Audio 2: El Exorcista -->
+        <div class="media-card audio-card">
+            <div class="audio-cover-container">
+                <img src="assets/images/The Exorcist_aud.jpg" alt="Portada El Exorcista" class="audio-cover-img">
+            </div>
+            <div class="audio-info">
+                <h4>El Exorcista (1973)</h4>
+                <p class="track-name">🎵 <strong>Tema:</strong> Tubular Bells</p>
+                <p class="track-composer">🎼 <strong>Compositor:</strong> Mike Oldfield</p>
+                <audio controls class="audio-player">
+                    <source src="assets/media/The Exorcist theme (HD)(MP3_160K).mp3" type="audio/mpeg">
+                    Tu navegador no soporta audio.
+                </audio>
+            </div>
+        </div>
+
+        <div class="media-card audio-card">
+            <div class="audio-cover-container">
+                <img src="assets/images/saw_aud.jpg" alt="Portada Saw" class="audio-cover-img">
+            </div>
+            <div class="audio-info">
+                <h4>Saw (2004)</h4>
+                <p class="track-name">🎵 <strong>Tema:</strong> Hello Zepp</p>
+                <p class="track-composer">🎼 <strong>Compositor:</strong> Charlie Clouser</p>
+                <audio controls class="audio-player">
+                    <source src="assets/media/Saw Theme Song- Hello Zepp(MP3_160K).mp3" type="audio/mpeg">
+                    Tu navegador no soporta audio.
+                </audio>
+            </div>
+        </div>
+
+        <div class="media-card audio-card">
+            <div class="audio-cover-container">
+                <img src="assets/images/silenthill_aud.jpg" alt="Portada Silent Hill" class="audio-cover-img">
+            </div>
+            <div class="audio-info">
+                <h4>Silent Hill (2006)</h4>
+                <p class="track-name">🎵 <strong>Tema:</strong> Promise (Reprise)</p>
+                <p class="track-composer">🎼 <strong>Compositor:</strong> Akira Yamaoka</p>
+                <audio controls class="audio-player">
+                    <source src="assets/media/Promise (Reprise)(MP3_160K).mp3" type="audio/mpeg">
+                    Tu navegador no soporta audio.
+                </audio>
+            </div>
+        </div>
+
+    </div>
+</div>
+        <!-- SECCIÓN 4: MINI-HERRAMIENTA (QUIZ INTERACTIVO) -->
+        <section id="quiz" class="quiz-section">
+            <h2 class="section-title">Terror Quiz: ¿Qué tanto sabes de Cine de Terror?</h2>
+            <p class="section-subtitle">Ponte a prueba respondiendo las siguientes preguntas</p>
+
+            <div class="quiz-card">
+                <form id="quiz-form" class="quiz-form">
+    <!-- Usuario -->
+    <div class="quiz-group">
+        <label for="username"><strong>Tu Nombre / Apodo:</strong></label>
+        <input type="text" id="username" placeholder="Ingresa tu nombre" required autocomplete="off" class="quiz-input">
+    </div>
+
+    <!-- Pregunta 1 -->
+    <div class="quiz-group">
+        <p>1. ¿Quién es el asesino principal en la saga "Halloween"?</p>
+        <select id="q1" required class="quiz-select">
+            <option value="">-- Selecciona una respuesta --</option>
+            <option value="a">Freddy Krueger</option>
+            <option value="b">Michael Myers</option>
+            <option value="c">Jason Voorhees</option>
+        </select>
+    </div>
+
+    <!-- Pregunta 2 -->
+    <div class="quiz-group">
+        <p>2. En "El Sexto Sentido", ¿cuál es la famosa frase de Cole?</p>
+        <select id="q2" required class="quiz-select">
+            <option value="">-- Selecciona una respuesta --</option>
+            <option value="a">"Veo gente muerta"</option>
+            <option value="b">"Ellos están aquí"</option>
+            <option value="c">"Que empiece el juego"</option>
+        </select>
+    </div>
+
+    <!-- Pregunta 3 -->
+    <div class="quiz-group">
+        <p>3. ¿Cómo se llama el demonio que posee a Regan en "El Exorcista"?</p>
+        <select id="q3" required class="quiz-select">
+            <option value="">-- Selecciona una respuesta --</option>
+            <option value="a">Valak</option>
+            <option value="b">Pazuzu</option>
+            <option value="c">Azazel</option>
+        </select>
+    </div>
+
+    <!-- Pregunta 4 -->
+    <div class="quiz-group">
+        <p>4. ¿En qué calle aterroriza Freddy Krueger a sus víctimas en sus sueños?</p>
+        <select id="q4" required class="quiz-select">
+            <option value="">-- Selecciona una respuesta --</option>
+            <option value="a">Elm Street</option>
+            <option value="b">Ocean Avenue</option>
+            <option value="c">Crystal Lake</option>
+        </select>
+    </div>
+
+    <!-- Pregunta 5 -->
+    <div class="quiz-group">
+        <p>5. En "El Juego del Miedo" (Saw), ¿cuál es la frase icónica de Jigsaw?</p>
+        <select id="q5" required class="quiz-select">
+            <option value="">-- Selecciona una respuesta --</option>
+            <option value="a">"¿Quieres jugar un juego?"</option>
+            <option value="b">"Dulce o truco"</option>
+            <option value="c">"7 días te quedan"</option>
+        </select>
+    </div>
+
+    <!-- Pregunta 6 -->
+    <div class="quiz-group">
+        <p>6. ¿Cuál es el objeto maldito que desencadena la saga "Hellraiser"?</p>
+        <select id="q6" required class="quiz-select">
+            <option value="">-- Selecciona una respuesta --</option>
+            <option value="a">Un espejo antiguo</option>
+            <option value="b">La Configuración del Lamento (Caja rompecabezas)</option>
+            <option value="c">Un libro con pasta de piel humana</option>
+        </select>
+    </div>
+
+    <!-- Pregunta 7 -->
+    <div class="quiz-group">
+        <p>7. ¿En qué película de terror aparece la muñeca "Annabelle" por primera vez?</p>
+        <select id="q7" required class="quiz-select">
+            <option value="">-- Selecciona una respuesta --</option>
+            <option value="a">El Conjuro</option>
+            <option value="b">La Monja</option>
+            <option value="c">Chucky: El Muñeco Diabólico</option>
+        </select>
+    </div>
+
+    <!-- Pregunta 8 -->
+    <div class="quiz-group">
+        <p>8. ¿Qué regla NUNCA debes romper con un Mogwai en "Gremlins"?</p>
+        <select id="q8" required class="quiz-select">
+            <option value="">-- Selecciona una respuesta --</option>
+            <option value="a">Tocarlo con las manos desnudas</option>
+            <option value="b">Darle de comer después de medianoche</option>
+            <option value="c">Dejarlo escuchar música fuerte</option>
+        </select>
+    </div>
+
+    <button type="submit" class="quiz-btn">Enviar Respuestas 🩸</button>
+</form>
+
+<!-- Contenedor para mostrar resultados -->
+<div id="quiz-result" class="quiz-result hidden"></div>
+
+                <!-- Área donde JavaScript mostrará los resultados dinámicamente -->
+                <div id="quiz-result" class="quiz-result hidden"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p>&copy; 2026 TerrorPelis - Proyecto desarrollado por los estudiantes Allan Acosta y Jeferson Córdoba.</p>
+    </footer>
+
+    <!-- VINCULACIÓN CON JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
